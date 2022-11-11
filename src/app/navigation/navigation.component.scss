@@ -1,0 +1,9 @@
+.active-route {
+  color: purple;
+  font-weight: bold;
+}
+
+mat-nav-list.list-horizontal {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,59 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row #toolbarRow>
+    <a mat-button [routerLink]="['/']">Angular Material Navigation</a>
+    <button mat-button [matMenuTriggerFor]="animals">Data</button>
+<mat-menu #animals="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="Customers">Customers</button>
+  <button mat-menu-item [matMenuTriggerFor]="sellers">Sellers</button>
+</mat-menu>
+
+<mat-menu #Customers="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="mining">Mining Industry</button>
+  <button mat-menu-item [matMenuTriggerFor]="medical">Medical facilities</button>
+  <button mat-menu-item [matMenuTriggerFor]="labor">Labor industries</button>
+  <button mat-menu-item>Organization</button>
+  <button mat-menu-item>Retails</button>
+</mat-menu>
+
+<mat-menu #sellers="matMenu">
+  <button mat-menu-item>Medicine company</button>
+  <button mat-menu-item>Chemical factory</button>
+  <button mat-menu-item>Paper company</button>
+  <button mat-menu-item>Wood sellers</button>
+  <button mat-menu-item>Retail company</button>
+  <button mat-menu-item>Dealer</button>
+</mat-menu>
+
+<mat-menu #mining="matMenu">
+  <button mat-menu-item>Oil</button>
+  <button mat-menu-item>Gold</button>
+  <button mat-menu-item>Underground</button>
+  <button mat-menu-item>In-situ</button>
+</mat-menu>
+
+<mat-menu #medical="matMenu">
+  <button mat-menu-item>Vaccines</button>
+  <button mat-menu-item>Polio</button>
+  <button mat-menu-item>Hepatitis A</button>
+  <button mat-menu-item>Chickenpox</button>
+</mat-menu>
+
+<mat-menu #labor="matMenu">
+  <button mat-menu-item>Skilled</button>
+  <button mat-menu-item>Unskilled</button>
+  <button mat-menu-item>Semi-skilled</button>
+  <button mat-menu-item disabled>Professional</button>
+</mat-menu>
+
+    <ng-template ngFor let-link="$implicit" [ngForOf]="links">
+      <a
+        mat-button
+        [routerLink]="link.path"
+        [routerLinkActive]="['mat-button-toggle-checked', 'active-route']"
+        #rla="routerLinkActive"
+      >
+        {{ link.label }}</a
+      >
+    </ng-template>
+  </mat-toolbar-row>
+</mat-toolbar>
