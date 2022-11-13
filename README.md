@@ -1,4 +1,4 @@
-# material-navbar
+# Material-navbar
 
 Landing page :
 
