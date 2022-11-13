@@ -1,4 +1,4 @@
-# AngularMaterial-navbar
+# Angular Material-navbar
 
 Landing page :
 
